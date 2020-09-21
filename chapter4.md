@@ -51,8 +51,8 @@
 |/Creator|文本字符串|最初创建此文档的程序的名称，如果它以另一种格式（例如，“Microsoft Word”）启动|
 |/Producer|文本字符串|将此文件转换为PDF的程序的名称，如果它以另一种格式（例如，字处理器的格式）启动|
 
+*Example 4-1. Typical document information dictionary*
 ```
-Example 4-1. Typical document information dictionary
 <<
    /ModDate (D:20060926213913+02'00') 
    /CreationDate (D:20060926213913+02'00')
@@ -119,27 +119,46 @@ PDF文档中的页面字典汇集了使用这些指令使用的资源（字体�
 
 
 ```
-1 0 obj Root node
-<< /Type /Pages /Kids [2 0 R 3 0 R 4 0 R] /Count 7 >>
+1 0 obj     % Root node
+<< /Type /Pages /Kids [2 0 R 3 0 R 4 0 R] /Count 7 
+>>
 endobj
-2 0 obj Intermediate node
-<< /Type /Pages /Kids [5 0 R 6 0 R 7 0 R] /Parent 1 0 R /Count 3 >> endobj
-3 0 obj Intermediate node
-<< /Type /Pages /Kids [8 0 R 9 0 R 10 0 R] /Parent 1 0 R /Count 3 >> endobj
-4 0 obj Page 7
-<< /Type /Page /Parent 1 0 R /MediaBox [0 0 500 500] /Resources << >> >> endobj
-5 0 obj Page 1
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 500 500] /Resources << >> >> endobj
-6 0 obj Page 2
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 500 500] /Resources << >> >> endobj
-7 0 obj Page 3
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 500 500] /Resources << >> >> endobj
-8 0 obj Page 4
-<< /Type /Page /Parent 3 0 R /MediaBox [0 0 500 500] /Resources << >> >> endobj
-9 0 obj Page 5
-<< /Type /Page /Parent 3 0 R /MediaBox [0 0 500 500] /Resources << >> >> endobj
-10 0 obj Page 6
-<< /Type /Page /Parent 3 0 R /MediaBox [0 0 500 500] /Resources << >> >> endobj
+2 0 obj     % Intermediate node
+<< /Type /Pages /Kids [5 0 R 6 0 R 7 0 R] /Parent 1 0 R /Count 3 
+>>
+endobj
+3 0 obj     % Intermediate node
+<< /Type /Pages /Kids [8 0 R 9 0 R 10 0 R] /Parent 1 0 R /Count 3 
+>>
+endobj
+4 0 obj     % Page 7
+<< /Type /Page /Parent 1 0 R /MediaBox [0 0 500 500] /Resources << >> 
+>>
+endobj
+5 0 obj     % Page 1
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 500 500] /Resources << >> 
+>>
+endobj
+6 0 obj     % Page 2
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 500 500] /Resources << >> 
+>>
+endobj
+7 0 obj     % Page 3
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 500 500] /Resources << >> 
+>>
+endobj
+8 0 obj     % Page 4
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 500 500] /Resources << >> 
+>>
+endobj
+9 0 obj     % Page 5
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 500 500] /Resources << >> 
+>>
+endobj
+10 0 obj    % Page 6
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 500 500] /Resources << >> 
+>>
+endobj
 ```
 
 |键|值类型|值|
@@ -192,30 +211,30 @@ endobj
 图4-3显示了Acrobat Reader中显示的此文档。图4-4是相应的对象图。
 
 ```
-%PDF-1.0 文件头
-1 0 obj Top-level of page tree: has two children—page one and an intermediate page tree node 
+%PDF-1.0    % 文件头
+1 0 obj     % Top-level of page tree: has two children—page one and an intermediate page tree node 
 << /Kids [2 0 R 3 0 R] /Type /Pages /Count 3 >>
 endobj
-4 0 obj Contents stream for page one
+4 0 obj     % Contents stream for page one
 << >>
 stream
 1. 0.000000 0.000000 1. 50. 770. cm BT /F0 36. Tf (Page One) Tj ET
 endstream
 endobj
-2 0 obj Page one
+2 0 obj     % Page one
 <<
-   /Rotate 0 
-   /Parent 1 0 R 
-   /Resources
-     << /Font << /F0 << /BaseFont /Times-Italic /Subtype /Type1 /Type /Font >> >> >> 
-   /MediaBox [0.000000 0.000000 595.275590551 841.88976378]
-   /Type /Page
-   /Contents [4 0 R]
+  /Rotate 0 
+  /Parent 1 0 R 
+  /Resources
+    << /Font << /F0 << /BaseFont /Times-Italic /Subtype /Type1 /Type /Font >> >> >> 
+  /MediaBox [0.000000 0.000000 595.275590551 841.88976378]
+  /Type /Page
+  /Contents [4 0 R]
 >>
 endobj
-5 0 obj Document catalog
+5 0 obj     % Document catalog
 << /PageLayout /TwoColumnLeft /Pages 1 0 R /Type /Catalog >> endobj
-6 0 obj Page three
+6 0 obj     % Page three
 <<
   /Rotate 0 
   /Parent 3 0 R 
@@ -226,40 +245,40 @@ endobj
   /Contents [7 0 R] 
 >>
 endobj
-3 0 obj Intermediate page tree node, linking to pages two and three
+3 0 obj     % Intermediate page tree node, linking to pages two and three
 << /Parent 1 0 R /Kids [8 0 R 6 0 R] /Count 2 /Type /Pages >> 
 endobj
-8 0 obj Page two
+8 0 obj     % Page two
 <<
   /Rotate 270 
   /Parent 3 0 R 
   /Resources
-     << /Font << /F0 << /BaseFont /Times-Italic /Subtype /Type1 /Type /Font >> >> >> 
+    << /Font << /F0 << /BaseFont /Times-Italic /Subtype /Type1 /Type /Font >> >> >> 
   /MediaBox [0.000000 0.000000 595.275590551 841.88976378]
   /Type /Page
   /Contents [9 0 R]
 >>
 endobj
-9 0 obj Content stream for page two
+9 0 obj     % Content stream for page two
 << >>
 stream
 q 1. 0.000000 0.000000 1. 50. 770. cm BT /F0 36. Tf (Page Two) Tj ET Q
 1. 0.000000 0.000000 1. 50. 750 cm BT /F0 16 Tf ((Rotated by 270 degrees)) Tj ET 
 endstream
 endobj
-7 0 obj Content stream for page three
+7 0 obj     % Content stream for page three
 << >>
 stream
 1. 0.000000 0.000000 1. 50. 770. cm BT /F0 36. Tf (Page Three) Tj ET
 endstream
 endobj
-10 0 obj Document information dictionary
+10 0 obj    % Document information dictionary
 <<
-   /Title (PDF Explained Example) 
-   /Author (John Whitington) 
-   /Producer (Manually Created) 
-   /ModDate (D:20110313002346Z) 
-   /CreationDate (D:2011)
+  /Title (PDF Explained Example) 
+  /Author (John Whitington) 
+  /Producer (Manually Created) 
+  /ModDate (D:20110313002346Z) 
+  /CreationDate (D:2011)
 >>
 endobj xref
 0 11
